@@ -1,0 +1,1121 @@
+{
+  "@self" : "/csa/api/topology-model/topology/976eaf43-45f0-45a9-b4c1-145d2e0c566c",
+  "@type" : "urn:x-hp:2013:software:cloud:topology_model:topology",
+  "groupId" : "com.hp.csa",
+
+  "artifactId" : "d713bb73-c4f8-401a-bb6a-d8f9f6b56bef",
+  "version" : "1.0.0",
+  "displayName" : "Petclinic Design on vCenter",
+  "description" : "This is a two-tier application which has db component installed on MySql and app component on tomcat. These components are deployed on vCenter Servers.",
+  "resources" : [ {
+    "id" : "PetClinic_Application_8ce818e8_4128_4dd8_a98c_fb97dbad73ea_568ee179841b4a7ab7a25f025276a748__VERSION__1__GROUPID__com.hp.csa.type0001",
+
+    "name" : "PetClinic",
+    "component" : {
+      "@self" : "/csa/api/topology-model/component-type/b230c2a7-a860-47da-af98-cb47fc03c0c1",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "PetClinic_Application_8ce818e8_4128_4dd8_a98c_fb97dbad73ea_568ee179841b4a7ab7a25f025276a748",
+
+      "version" : "1"
+    },
+    "properties" : [ {
+      "propertyKey" : "port",
+      "propertyValue" : {
+        "value" : "22",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "mysqlusername",
+
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "apphostname",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "Result",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "servicecommand",
+      "propertyValue" : {
+        "value" : "sh /tmp/petclinic_jdbc_conf.sh",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactusername",
+
+      "propertyValue" : {
+
+        "value" : null,
+
+        "type" : "string"
+
+      }
+
+    }, {
+      "propertyKey" : "dbhostname",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+
+    }, {
+      "propertyKey" : "artifactpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "localfilepath",
+      "propertyValue" : {
+        "value" : "petclinic.war",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "tomcathome",
+      "propertyValue" : {
+        "value" : "/opt/tomcat7",
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "hostusername",
+      "propertyValue" : {
+
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "dbusername",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "remotefilepath",
+      "propertyValue" : {
+        "value" : "/tmp/",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "dbpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "mysqlpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifacturl",
+      "propertyValue" : {
+
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/petclinic/petclinic.war",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "privatekeyPath",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "hostpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "configurationurl",
+      "propertyValue" : {
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/petclinic/petclinic_jdbc_conf.sh",
+        "type" : "string"
+      }
+    } ],
+    "outgoingRelations" : [ {
+      "relationType" : "association",
+      "id" : "rel0003",
+      "properties" : [ {
+        "propertyKey" : "_modifiable_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      }, {
+        "propertyKey" : "_relation_type",
+        "propertyValue" : {
+          "value" : {
+            "first" : "Association",
+            "second" : "ASSOCIATION"
+          },
+
+          "type" : "pair"
+        }
+      }, {
+        "propertyKey" : "_enable_modify_during_lifecycle_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      } ],
+      "relationDescriptorName" : "configureDb_PetClinic_Application_8ce818e8_4128_4dd8_a98c_fb97dbad73ea_568ee179841b4a7ab7a25f025276a748",
+
+      "resourceReference" : {
+        "name" : "PetClinic DB"
+      }
+    }, {
+      "relationType" : "association",
+      "id" : "rel0005",
+      "properties" : [ {
+        "propertyKey" : "_modifiable_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+
+        }
+      }, {
+        "propertyKey" : "_relation_type",
+        "propertyValue" : {
+          "value" : {
+            "first" : "Association",
+            "second" : "ASSOCIATION"
+
+          },
+          "type" : "pair"
+        }
+      }, {
+        "propertyKey" : "_enable_modify_during_lifecycle_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+
+        }
+      } ],
+      "relationDescriptorName" : "hostedOn_PetClinic_Application_8ce818e8_4128_4dd8_a98c_fb97dbad73ea_568ee179841b4a7ab7a25f025276a748",
+      "resourceReference" : {
+        "name" : "Tomcat"
+      }
+    } ],
+    "annotations" : {
+      "description" : "\n      ",
+      "displayName" : "PetClinic",
+      "y" : "-400",
+      "x" : "-200"
+
+    },
+
+    "capabilityChars" : [ ],
+    "requirements" : [ ]
+  }, {
+    "id" : "Tomcat_Server_c2bc9714_19c3_488b_bdd0_37ee9544a21f_aade4fa90c4a4c8397d9a9bf4d141949__VERSION__1__GROUPID__com.hp.csa.type0001",
+    "name" : "Tomcat",
+    "component" : {
+      "@self" : "/csa/api/topology-model/component-type/1648af89-1380-4ef7-abeb-16f365b47d23",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "Tomcat_Server_c2bc9714_19c3_488b_bdd0_37ee9544a21f_aade4fa90c4a4c8397d9a9bf4d141949",
+      "version" : "1"
+    },
+    "properties" : [ {
+      "propertyKey" : "port",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "remoteFilePath",
+      "propertyValue" : {
+        "value" : "/tmp/",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "Result",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "appProtocol",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "configurationUrl",
+      "propertyValue" : {
+        "value" : "http://10.1.4.233:8085/userContent/install_tomcat.sh",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "hostname",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "sshPort",
+      "propertyValue" : {
+        "value" : "22",
+        "type" : "string"
+
+      }
+    }, {
+
+      "propertyKey" : "artifactUsername",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "password",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "username",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "privatekeyPath",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "installPath",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactUrl",
+
+      "propertyValue" : {
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/tomcat7/apache-tomcat-7.0.56.tar.gz",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactPassword",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "appPort",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "serviceCommand",
+      "propertyValue" : {
+        "value" : "sh install_tomcat.sh",
+        "type" : "string"
+      }
+    } ],
+    "outgoingRelations" : [ {
+      "relationType" : "association",
+
+      "id" : "rel0002",
+      "properties" : [ {
+        "propertyKey" : "_modifiable_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      }, {
+        "propertyKey" : "_relation_type",
+
+        "propertyValue" : {
+          "value" : {
+            "first" : "Association",
+            "second" : "ASSOCIATION"
+          },
+
+          "type" : "pair"
+        }
+      }, {
+        "propertyKey" : "_enable_modify_during_lifecycle_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      } ],
+      "relationDescriptorName" : "installsOn_Tomcat_Server_c2bc9714_19c3_488b_bdd0_37ee9544a21f_aade4fa90c4a4c8397d9a9bf4d141949",
+      "resourceReference" : {
+        "name" : "App Server"
+      }
+    } ],
+    "annotations" : {
+      "description" : "\n      ",
+      "displayName" : "Tomcat",
+      "y" : "-200",
+      "x" : "-200"
+    },
+    "capabilityChars" : [ ],
+    "requirements" : [ ]
+  }, {
+    "id" : "PetClinic_DB_Conf_073700e3_bc09_4805_b848_3f35d2fcbc7c_fc10bacfab5842f89ae7c2982435398e__VERSION__1__GROUPID__com.hp.csa.type0001",
+    "name" : "PetClinic DB",
+    "component" : {
+      "@self" : "/csa/api/topology-model/component-type/887223ef-f5b3-4f44-a950-d72ca06dcd8a",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "PetClinic_DB_Conf_073700e3_bc09_4805_b848_3f35d2fcbc7c_fc10bacfab5842f89ae7c2982435398e",
+
+      "version" : "1"
+
+    },
+
+    "properties" : [ {
+      "propertyKey" : "mysqlusername",
+      "propertyValue" : {
+        "value" : "root",
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "port",
+      "propertyValue" : {
+        "value" : "22",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "Result",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "servicecommand",
+      "propertyValue" : {
+        "value" : "sh /tmp/mysqldb_conf.sh",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactusername",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "dbhostname",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "artifactpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "dbusername",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "remotefilepath",
+      "propertyValue" : {
+        "value" : "/tmp/",
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "mysqlpassword",
+      "propertyValue" : {
+        "value" : "ENC(i1JMSj+KjX/Oq0Ej9tjtkFy4ru32xv4p)",
+        "type" : "string_encrypted"
+
+      }
+
+    }, {
+      "propertyKey" : "dbpassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "privatekeyPath",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "configurationurl",
+      "propertyValue" : {
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/mysql56/mysqldb_conf.sh",
+        "type" : "string"
+      }
+    } ],
+    "outgoingRelations" : [ {
+      "relationType" : "association",
+      "id" : "rel0004",
+      "properties" : [ {
+        "propertyKey" : "_modifiable_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      }, {
+        "propertyKey" : "_relation_type",
+        "propertyValue" : {
+          "value" : {
+            "first" : "Association",
+            "second" : "ASSOCIATION"
+          },
+
+          "type" : "pair"
+
+        }
+
+      }, {
+        "propertyKey" : "_enable_modify_during_lifecycle_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      } ],
+      "relationDescriptorName" : "configureDb_PetClinic_DB_Conf_073700e3_bc09_4805_b848_3f35d2fcbc7c_fc10bacfab5842f89ae7c2982435398e",
+      "resourceReference" : {
+        "name" : "MySQL"
+      }
+    } ],
+
+    "annotations" : {
+
+      "description" : "\n      ",
+      "displayName" : "PetClinic DB",
+      "y" : "-400",
+
+      "x" : "-600"
+
+    },
+    "capabilityChars" : [ ],
+    "requirements" : [ ]
+  }, {
+    "id" : "MySQL_Database_20509e36_558f_4502_ba03_f76f5d879afb_f21f3034d7ea4431981b737d81ce6299__VERSION__1__GROUPID__com.hp.csa.type0001",
+    "name" : "MySQL",
+    "component" : {
+      "@self" : "/csa/api/topology-model/component-type/fc473c57-dbcb-4dd8-85a6-d3522ca0b6d1",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "MySQL_Database_20509e36_558f_4502_ba03_f76f5d879afb_f21f3034d7ea4431981b737d81ce6299",
+      "version" : "1"
+    },
+    "properties" : [ {
+      "propertyKey" : "port",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "Result",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "remoteFilePath",
+
+      "propertyValue" : {
+        "value" : "/tmp/",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "configurationUrl",
+      "propertyValue" : {
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/mysql56/install_mysql.sh",
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "hostname",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "sshPort",
+      "propertyValue" : {
+        "value" : "22",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactUsername",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+      "propertyValue" : {
+
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "type",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "password",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "username",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+
+        "value" : "",
+        "type" : "string"
+
+      }
+    }, {
+
+      "propertyKey" : "privatekeyPath",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "installPath",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+
+      "propertyKey" : "artifactUrl",
+
+      "propertyValue" : {
+        "value" : "http://10.1.6.81:8082/job/software_repository/ws/mysql56/mysql-server_5.6.21-1ubuntu12.04_amd64.deb-bundle.tar",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "artifactPassword",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "serviceCommand",
+      "propertyValue" : {
+        "value" : "sh install_mysql.sh",
+        "type" : "string"
+      }
+    } ],
+    "outgoingRelations" : [ {
+      "relationType" : "association",
+      "id" : "rel0001",
+      "properties" : [ {
+        "propertyKey" : "_modifiable_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      }, {
+        "propertyKey" : "_relation_type",
+        "propertyValue" : {
+          "value" : {
+            "first" : "Association",
+            "second" : "ASSOCIATION"
+          },
+          "type" : "pair"
+        }
+      }, {
+        "propertyKey" : "_enable_modify_during_lifecycle_properties",
+        "propertyValue" : {
+          "value" : "",
+          "type" : "string"
+        }
+      } ],
+      "relationDescriptorName" : "installsOn_MySQL_Database_20509e36_558f_4502_ba03_f76f5d879afb_f21f3034d7ea4431981b737d81ce6299",
+      "resourceReference" : {
+        "name" : "DB Server"
+
+      }
+    } ],
+
+    "annotations" : {
+      "description" : "\n      ",
+      "displayName" : "MySQL",
+      "y" : "-200",
+
+      "x" : "-600"
+    },
+    "capabilityChars" : [ ],
+
+    "requirements" : [ ]
+  }, {
+    "id" : "VcenterServerType__VERSION__04.20.0000__GROUPID__com.hp.csa.type0001",
+
+    "name" : "DB Server",
+    "component" : {
+
+      "@self" : "/csa/api/topology-model/component-type/26217ff4-6a85-4332-93e7-9231ae7a35b6",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "VcenterServerType",
+      "version" : "04.20.0000"
+
+    },
+
+    "properties" : [ {
+      "propertyKey" : "requestedMemorySize",
+
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmTemplateReference",
+      "propertyValue" : {
+        "value" : "ubuntu1204-hemant",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "cpuCount",
+      "propertyValue" : {
+        "value" : "2",
+
+        "type" : "number"
+      }
+    }, {
+      "propertyKey" : "result",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "ipAddressList",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "privateKey",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+
+      "propertyKey" : "memorySize",
+      "propertyValue" : {
+        "value" : "1024",
+        "type" : "number"
+      }
+    }, {
+      "propertyKey" : "requestedCpuCount",
+
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "customizationSpec",
+      "propertyValue" : {
+        "value" : "useVmName_Linux",
+
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "hostname",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "macAddress",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "password",
+      "propertyValue" : {
+        "value" : "ENC(G3dysVXvkYgblZCvJe3oaD7cOaktVpS/)",
+        "type" : "string_encrypted"
+      }
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+
+      "propertyKey" : "username",
+      "propertyValue" : {
+        "value" : "root",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "vmID",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmState",
+      "propertyValue" : {
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmFolder",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmNamePrefix",
+      "propertyValue" : {
+        "value" : "vm1",
+
+        "type" : "string"
+      }
+    }, {
+
+      "propertyKey" : "ipAddress",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    } ],
+
+    "outgoingRelations" : [ ],
+    "annotations" : {
+      "description" : "\n      ",
+
+      "displayName" : "DB Server",
+
+      "y" : "0",
+      "x" : "-600"
+
+    },
+    "capabilityChars" : [ ],
+    "requirements" : [ ]
+  }, {
+    "id" : "VcenterServerType__VERSION__04.20.0000__GROUPID__com.hp.csa.type0002",
+    "name" : "App Server",
+    "component" : {
+      "@self" : "/csa/api/topology-model/component-type/26217ff4-6a85-4332-93e7-9231ae7a35b6",
+      "groupId" : "com.hp.csa.type",
+      "artifactId" : "VcenterServerType",
+
+      "version" : "04.20.0000"
+    },
+    "properties" : [ {
+      "propertyKey" : "requestedMemorySize",
+
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmTemplateReference",
+      "propertyValue" : {
+        "value" : "ubuntu1204-hemant",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "cpuCount",
+      "propertyValue" : {
+        "value" : "2",
+        "type" : "number"
+      }
+    }, {
+      "propertyKey" : "result",
+
+      "propertyValue" : {
+
+        "value" : null,
+
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "ipAddressList",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "privateKey",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "memorySize",
+      "propertyValue" : {
+        "value" : "1024",
+        "type" : "number"
+      }
+    }, {
+      "propertyKey" : "requestedCpuCount",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+
+      "propertyKey" : "customizationSpec",
+      "propertyValue" : {
+        "value" : "useVmName_Linux",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "hostname",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "_enable_modify_during_lifecycle_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "macAddress",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "password",
+      "propertyValue" : {
+        "value" : "ENC(8xw2TWUO6tgcyj96G78W/pzwTAaDv4JF)",
+        "type" : "string_encrypted"
+      }
+    }, {
+      "propertyKey" : "response",
+      "propertyValue" : {
+
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "username",
+      "propertyValue" : {
+
+        "value" : "root",
+        "type" : "string"
+      }
+
+    }, {
+
+      "propertyKey" : "_modifiable_properties",
+      "propertyValue" : {
+        "value" : "",
+        "type" : "string"
+      }
+
+    }, {
+      "propertyKey" : "vmID",
+
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "vmState",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "vmFolder",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+
+      }
+    }, {
+      "propertyKey" : "vmNamePrefix",
+      "propertyValue" : {
+        "value" : "vm2",
+        "type" : "string"
+      }
+    }, {
+      "propertyKey" : "ipAddress",
+      "propertyValue" : {
+        "value" : null,
+        "type" : "string"
+      }
+    } ],
+    "outgoingRelations" : [ ],
+    "annotations" : {
+      "description" : "\n      ",
+      "displayName" : "App Server",
+      "y" : "0",
+      "x" : "-200"
+    },
+    "capabilityChars" : [ ],
+    "requirements" : [ ]
+  } ],
+  "revision" : 10,
+  "properties" : [ {
+    "propertyKey" : "metamodelId",
+    "propertyValue" : {
+      "value" : "test",
+      "type" : "string"
+    }
+  }, {
+    "propertyKey" : "is_express",
+    "propertyValue" : {
+      "value" : "false",
+      "type" : "boolean"
+    }
+  } ],
+  "iconUrl" : "/csa/images/library/pets.png",
+  "tagIds" : [ {
+    "@self" : "/csa/api/tag/8a818cf8ara15bc772b0145cb6efjhg99"
+  } ],
+  "state" : "UNLOCKED",
+  "hidden" : false,
+  "partial" : false,
+  "profiles" : [ ],
+  "annotations" : {
+    "providerType" : "independent",
+    "serviceBlueprintId" : "8a818650499e27df01499e4cc3340021"
+  }
+}

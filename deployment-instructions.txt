@@ -1,0 +1,23 @@
+Deploying the Petclinic Sample
+
+Assumptions:
+* You have a VM with Tomcat6, Apache2, and mod_jk installed and configured as necessary.  Let's call this the Tomcat VM.  (If you instantiate a VM from the ARMUbuntuTomcat6ApacheMySQL template on brdc-esx19.usa.hp.com, you will have the necessary configuration; just start the tomcat6 and apache2 services.)
+* You have a VM with MySQL installed and configured as necessary.  Let's call this the MySQL VM.  (If you instantiate a VM from the ARMUbuntuTomcat6ApacheMySQL template on brdc-esx19.usa.hp.com, you will have the necessary configuration; just start the mysql service.)
+
+Steps:
+* On the MySQL VM,
+  * edit /etc/mysql/my.cnf so that the bind-address is set to your MySQL VM's IP address
+  * from a mysql prompt, execute
+    GRANT ALL ON *.* TO '<user>'@'<Tomcat VM's hostname>' IDENTIFIED BY '<password>';
+    CREATE DATABASE IF NOT EXISTS petclinic;
+* Then, on the Tomcat VM,
+  * copy petclinic.war from the build into /var/lib/tomcat6/webapps
+  * start the tomcat6 service and wait for the petclinic.war to be expanded
+  * stop the tomcat6 service
+  * copy http://arm-proxy.usa.hp.com/svn/armcc/trunk/armcc/sample-applications/spring-petclinic/src/main/resources/db into /var/lib/tomcat6/webapps/petclinic/WEB-INF/classes
+  * edit /var/lib/tomcat6/webapps/petclinic/WEB-INF/classes/jdbc.properties so that
+    * ${tier_mysql.server.hostname} is replaced with the MySQL VM's hostname
+    * ${mysql.user.name} is replaced with the username you specified in the GRANT statement above
+    * ${mysql.user.password} is replaced with the password you specified in the GRANT statement above
+
+To test the application, on the Tomcat VM, go to the URL http://localhost:8080/petclinic.  If you don't see a cute picture of a puppy and kitten, check /var/log/tomcat6/catalina.out for errors.  If you discover that there are missing steps in these instructions, please update them and commit to SVN.
